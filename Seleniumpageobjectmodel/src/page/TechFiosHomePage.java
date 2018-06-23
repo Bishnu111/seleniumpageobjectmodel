@@ -16,8 +16,9 @@ WebDriver driver;
 	}
 
 
-	@FindBy(how=How.XPATH,using="//text()[contains(.,'CRM')]/ancestor::a[1]")
+	@FindBy(how=How.XPATH, using="//text()[contains(.,'CRM')]/ancestor::a[1]")
 	WebElement crmlink;
+
 	
 	
 	@FindBy(how=How.XPATH, using="//a[text()='Add Contact']")
@@ -50,9 +51,14 @@ WebDriver driver;
 	@FindBy(how=How.XPATH, using="//h5[text()='Income vs Expense - June 2018']")
 	WebElement incomevsexpense;
 	
+	
+	
+	public void dashboard() {
+		crmlink.click();
+	}
+	
 	public void clickingcontactbuttons() {
-	crmlink.click();
-	addcontactlink.click();
+    addcontactlink.click();
 	
 	}
 	public void ValidateUser(){
